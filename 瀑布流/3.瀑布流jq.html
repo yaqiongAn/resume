@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+        *{
+          margin:0;
+          padding:0;
+        }
+        .box{
+          width: 850px;
+          margin: 0 auto;
+          /* border: 1px solid black; */
+          padding-left: 10px;
+        }
+        ul{
+          list-style: none;
+          width: 200px;
+          float: left;
+
+          margin-right: 10px;
+        }
+        li{
+          /* border: 1px solid red; */
+          margin-bottom: 10px;
+        }
+    </style>
+
+
+
+  </head>
+  <body>
+    <div class="box">
+      <ul class="list1"></ul>
+      <ul class="list2"></ul>
+      <ul class="list3"></ul>
+      <ul class="list4"></ul>
+    </div>
+
+  </body>
+  <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+        function random(max,min){
+          return parseInt(Math.random()*(max-min)+min);
+        }
+
+        function clientHeight(){
+          return window.innerHeight ||document.documentElement.clientHeight;
+        }
+
+        function scrollHeight(){
+          return document.body.scrollTop || document.documentElement.scrollTop;
+        }
+
+        $(window).scroll(function(event) {
+          var height = clientHeight()+scrollHeight();
+          // if (height>=$(document).height()) {
+          if (height>=document.documentElement.offsetHeight) {
+            // console.log($(document).height());
+            create(20);
+          }
+        });
+
+        function create(n){
+          for (var i = 0; i < n; i++) {
+            var str = $('.box>ul');
+            var minHeight = $('.box>ul')[0];
+            for (var j = 0; j <$('.box>ul').length; j++) {
+              if (minHeight.offsetHeight>$('.box>ul')[j].offsetHeight) {
+                minHeight = $('.box>ul')[j];
+                console.log(minHeight);
+              }
+            }
+            var h = random(200,800);
+            $('<li></li>').css({'width':'200px','height':'h+"px"','backgroundPosition':'center'}).css({
+              'backgroundImage':'url(1.gif)',
+              'backgroundRepeat':'no-repeat'
+            }).append($('<img>',{src:'http://unsplash.it/250/'+h+'/?random'}).css({width:'200px',height:h+'px'})).appendTo(minHeight);
+          }
+        }
+        create(20);
+    });
+  </script>
+</html>

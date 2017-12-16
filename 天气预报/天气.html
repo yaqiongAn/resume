@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+      }
+      #content{
+        width:900px;
+        height:900px;
+        margin:30px auto;
+      }
+      input{
+        width:450px;
+        height:25px;
+        border-top: 1px solid black;
+        margin-left: 100px;
+      }
+      button{
+        width:100px;
+        height:29px;
+        border:1px solid black;
+        border-radius: 8%;
+        margin-left: 15px;
+      }
+      .city{
+        height:100px;
+        width:700px;
+        margin:0 auto;
+        background: white;
+        position: relative;
+        border-bottom: 1px solid black;
+      }
+      .city>span{
+        line-height: 120px;
+        font-size: 23px;
+      }
+      .city>label{
+        font-size: 40px;
+        position: absolute;
+        left:110px;
+        top:25px;
+        font-weight: 0;
+      }
+      .city>time{
+        font-size: 18px;
+        position: absolute;
+        right:0;
+        top:50px;
+      }
+      .wendu{
+        width:700px;
+        margin:0 auto;
+        height:150px;
+        border-bottom: 1px solid black;
+        padding-top: 30px;
+      }
+      .wendu>label,.wendu>span{
+        font-size: 55px;
+        font-weight: 900;
+
+      }
+      .wendu>label:nth-of-type(1){
+        color:#0099ff;
+      }
+      .wendu>label:nth-of-type(2){
+        color:#ff6600;
+      }
+      .wendu>a{
+        font-size: 60px;
+        margin-left: 50px;
+      }
+      .wendu>p{
+        font-size: 35px;
+        line-height: 100px;
+      }
+      #bigbox{
+        width:700px;
+        margin:0 auto;
+        height:300px;
+      }
+      #bigbox>div{
+        float:left;
+        width:127px;
+        height:280px;
+        margin-top: 10px;
+        border-right: 1px solid black;
+      }
+      #ssbigbox>div>span{
+        font-size: 10px;
+        color: black;
+      }
+      .active1{
+        text-align: center;
+        color:#0099ff;
+        height:55px;
+        line-height: 55px;
+      }
+      .active2{
+        text-align: center;
+        color:#ff6600;
+        height:55px;
+        line-height: 55px;
+      }
+
+
+    </style>
+
+    <script src="ajax.js" charset="utf-8"></script>
+    <script type="text/javascript">
+       window.onload=function(){
+
+        var btn=document.querySelector('#btn');
+        btn.onclick=function(){
+          var input=document.querySelector('#input');
+          var mm=input.value;
+          var nn='city='+input.value;
+
+          var divs=document.querySelectorAll('#bigbox>div');
+          console.log(divs);
+
+          // for (var i=0 ;i<divs.length;i++) {
+          //   if (divs[i]!=null) {
+          //     divs[i]=null;
+          //   }
+          //
+          // }
+
+          successFn;
+          errorFn;
+
+          ajaxFn('GET','http://wthrcdn.etouch.cn/weather_mini',nn,successFn,errorFn);
+     }
+     function successFn(obj){
+       console.log(obj);
+       var temp=JSON.parse(obj);
+       console.log(temp);
+       var low=document.querySelector('#low');
+       var high=document.querySelector('#high');
+       var data=temp.data;
+
+       var labeltag= document.querySelector('#city');
+       labeltag.innerHTML=data.city;
+
+       var timetag= document.querySelector('#time');
+       var now=new Date;
+       var year=now.getFullYear();
+       var month=now.getMonth();
+       var date=now.getDate();
+       timetag.innerHTML=year+"年"+(month+1)+"月"+date+"日";
+
+
+       var forecast=data.forecast;
+       var lowa=forecast[0].low;
+       lowa=lowa.substring(3);
+       low.innerHTML=lowa;
+       var higha=forecast[0].high;
+       higha=higha.substring(3);
+       high.innerHTML=higha;
+       var qing=document.querySelector('#qing');
+       var qinga=forecast[0].type;
+       qing.innerHTML=qinga;
+       var divs=document.querySelectorAll('#bigbox>div');
+       console.log(divs);
+       for (var i=0 ;i<forecast.length;i++) {
+            // 把所有bigbox里的div清空
+           divs[i].innerHTML='';
+
+         var spantag=document.createElement('p');
+         spantag.innerHTML=forecast[i].date;
+         spantag.style.textAlign='center';
+         divs[i].appendChild(spantag);
+
+         var ptag=document.createElement('p');
+         ptag.innerHTML=forecast[i].low.substring(3);
+         ptag.className='active1';
+         divs[i].appendChild(ptag);
+
+         var ptag2=document.createElement('p');
+         ptag2.innerHTML=forecast[i].high.substring(3);
+         ptag2.className='active2';
+         divs[i].appendChild(ptag2);
+
+         var imgtag=document.createElement('img');
+         imgtag.style.marginLeft='30px';
+         divs[i].appendChild(imgtag);
+         var tu=forecast[i].type;
+         if (tu=='晴') {
+           imgtag.src='sun.ico';
+         }
+         if (tu=='阴') {
+           imgtag.src='Cloudy.png';
+         }
+         if (tu=='雨') {
+           imgtag.src='Snowing.png';
+         }
+         if (tu=='多云') {
+           imgtag.src='cloudy-.png';
+         }
+         if (tu=='小雨'||tu=='大雨'||tu=='中雨') {
+           imgtag.src='rain.png';
+         }
+
+       }
+
+
+    }
+    function errorFn(err){
+       console.log(err);
+    }
+     ajaxFn('GET','http://wthrcdn.etouch.cn/weather_mini','city=北京',successFn,errorFn);
+     successFn;
+     errorFn;
+    }
+
+    </script>
+
+  </head>
+  <body>
+    <div id="content">
+      <input id="input" type="text"  placeholder="请输入城市名">
+      <button id="btn" type="submit" name="button">查询</button>
+      <div class="city">
+        <span>当前城市</span>
+        <label id="city"></label>
+        <time id="time"></time>
+      </div>
+      <div class="wendu">
+        <label id="low"></label>
+        <span>~</span>
+        <label id="high"></label>
+        <a id="qing"></a>
+        <p>未来七日气象</p>
+      </div>
+      <div id="bigbox">
+        <div >
+
+          <p></p>
+          <label></label>
+          <img src="" alt="">
+
+        </div>
+        <div class="two">
+
+          <p></p>
+          <label></label>
+          <img src="" alt="">
+        </div>
+        <div class="three">
+          <span></span>
+          <p></p>
+          <label></label>
+          <img src="" alt="">
+
+        </div>
+        <div class="four">
+          <span></span>
+          <p></p>
+          <label></label>
+          <img src="" alt="">
+
+        </div>
+        <div class="five">
+          <span></span>
+          <p></p>
+          <label></label>
+          <img src="" alt="">
+
+        </div>
+
+      </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>fullPage.js — 基本演示</title>
+
+<link rel="stylesheet" href="jquery.fullPage.css">
+<link rel="stylesheet" href="./animate.css">
+<link rel="stylesheet" href="./bootstrap.css">
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./font-awesome.css">
+<!-- <link rel="stylesheet" href="./iconfont.css"> -->
+
+<script src="jquery-3.2.1.min.js"></script>
+
+<script src="jquery-ui-1.10.3.min.js"></script>
+
+<script src="jquery.fullPage.js"></script>
+<script src="./bootstrap.js"></script>
+
+
+
+</head>
+
+
+
+<body>
+<nav class="navbar navbar-default resume">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand EngName" data-menuanchor="page1" href="#page1">Ann</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" id="menu">
+                <li data-menuanchor="page2" class="active">
+                    <a href="#page2">专业技能</a>
+                </li>
+                <li data-menuanchor="page3">
+                    <a href="#page3">基本资料</a>
+                </li>
+                <li data-menuanchor="page4">
+                    <a href="#page4">项目经验</a>
+                </li>
+                <li data-menuanchor="page5">
+                    <a href="#page5">自我评价</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<div class="section section1">
+    <img src="" alt="">
+	<h3>安亚琼</h3>
+
+    <p class="p">我的代码和我一样优雅</p>
+    <p>
+        <a href="https://github.com/yaqiongAn" target="_blank">Github | </a><a href="https://segmentfault.com/u/qinger" target="_blank">segmentfault | </a><a href="#page3" title="tel:18518904727" target="_blank">contact me</a>
+    </p>
+
+</div>
+<div class="section section2">
+    <p>我的技能</p>
+    <ul class="skill">
+        <li>熟练掌握JavaScript、HTML5、CSS等网页制作技术</li>
+        <li>熟练掌握响应式布局，流式布局，弹性布局等</li>
+        <li>能够做到各种浏览器的良好兼容</li>
+        <li>熟练掌握CSS动画，canvas动画</li>
+        <li>熟练掌握前端脚本类库jquery</li>
+        <li>熟练使用bootstrap,swiper等库</li>
+        <li>能使用Ajax， JSONP跨域，进行数据交互</li>
+        <li>会用原生的JavaScript完成页面展示与交互效果,掌握面向对象编程</li>
+        <li>能编写基本正则表达式</li>
+        <li>熟练使用git管理代码</li>
+        <li>熟悉node.js开发</li>
+        <li>熟悉VUE框架，能使用VUE框架配合实现产品UI和交互方面的开发需求</li>
+        <li>能独立开发vue组件</li>
+        <li>熟悉自动化构建工具gulp， webpack</li>
+        <li>熟悉ES6语法</li>
+        <li>熟悉less，sass等预处理工具</li>
+        <li>了解angular框架，react框架</li>
+        <li>了解python,java,android等语言</li>
+        
+        
+    </ul>
+</div>
+<div class="section section3"> 
+    <h3>基本资料</h3>
+    <div class="info"> 
+        <div class="info-1"> 
+            <img src="" alt="">
+            <i class="fa fa-laptop"></i>
+            
+            <div>
+                <h4>基本信息</h4>
+                <p>姓名：安亚琼</p>
+                <p>年龄：22 籍贯：河南</p>
+            </div>
+        </div>
+        <div class="info-2">
+                <!-- <img src="" alt=""> -->
+                <i class="fa fa-code"></i>
+                
+                <div>
+                    <h4>毕业院校</h4>
+                    <p>安阳师范学院</p>
+                    
+                </div>
+            </div>
+            <div class="info-3">
+                    <!-- <img src="" alt=""> -->
+                    <i class="fa fa-rocket"></i>
+                    
+                    <div>
+                        <h4>学历与专业</h4>
+                        <p>软件开发 本科</p>
+                        <p>专业技能 编程</p>
+                    </div>
+                </div>
+                <div class="info-4">
+                        <i class="fa fa-bullseye"></i>
+                        <div>
+                            <h4>联系方式</h4>
+                            <p>邮箱：an1759696739@qq.com</p>
+                            <p>电话：18518904727</p>
+                        </div>
+                    </div>
+        
+    </div>
+
+</div>
+
+<div class="section section4">
+
+	<div class="slide slide1">
+        <!-- <h3>第二屏的第一屏</h3> -->
+        
+        <div class="work">
+            <img  src="./image/WechatIMG5.jpeg" alt="">
+            <a class="jishu jishu1" href="./doubanmoive/index.html" target="_blank">
+                <p>豆瓣电影</p>
+                <p>vue框架</p>
+            </a>
+    
+    
+        </div>
+        <div class="work">
+            <img  src="./image/WechatIMG6.jpeg" alt="">
+            <a class="jishu" href="./瀑布流/3.瀑布流jq.html" target="_blank">
+                    <p>瀑布流</p>
+                    <p>懒加载</p>
+            </a>
+    
+    
+        </div>
+        <div class="work">
+            <img  src="./image/WechatIMG14.jpeg" alt="">
+            <a class="jishu" href="./tinyHeart/tinyHeart.html" target="_blank">
+                    <p>canvas</p>
+                    <p>canvas+js</p>
+            </a>
+    
+    
+        </div>
+        
+        
+        
+        
+    </div>
+
+	<div class="slide">
+        <!-- <h3>第二屏的第二屏</h3> -->
+        <div class="work">
+            <img  src="./image/WechatIMG8.jpeg" alt="">
+            <a class="jishu">
+                    <p>登录注册</p>
+                    <p>node搭建服务器</p>
+            </a>
+        
+        
+        </div>
+        <div class="work">
+            <img  src="./image/WechatIMG9.jpeg" alt="">
+            <a class="jishu" href="./apple/apple.html" target="_blank">
+                    <p>苹果官网</p>
+                    <p>bootstrap+flex</p>
+                    <p>响应式布局</p>
+            </a>
+        
+        </div>
+        <div class="work">
+            <img  src="./image/WechatIMG10.jpeg" alt="">
+            <a class="jishu" href="./python/python.html" target="_blank">
+                    <p>python手机页面</p>
+                    <p>div+css+gulp</p>
+            </a>
+        
+        
+        </div>
+
+    </div>
+
+	<div class="slide">
+        <!-- <h3>第二屏的第三屏</h3> -->
+        <div class="work">
+            <img  src="./image/WechatIMG11.jpeg" alt="">
+            <a class="jishu" href="./xiaomi/xiaomi.html" target="_blank">
+                    <p>小米首页</p>
+                    <p>jquery+gulp</p>
+            </a>
+            
+            
+        </div>
+        <div class="work">
+            <img  src="./image/WechatIMG12.jpeg" alt="">
+            <a class="jishu" href="./gulp/gulp.html" target="_blank">
+                    <p>gulp中文网</p>
+                    <p>bootstrap</p>
+            </a>
+        
+        
+        </div>
+        <div class="work">
+            <img  src="./image/WechatIMG7.jpeg" alt="">
+            <a class="jishu" href="./天气预报/天气.html" target="_blank">
+                    <p>天气预报</p>
+                    <p>ajax+div+css</p>
+            </a>
+        
+        
+        </div>
+    </div>
+
+</div>
+
+<div class="section section5">
+
+	<div class="slide-box">
+        <p>个性开朗，易于沟通，善于聆听，善于理解</p>
+        <p>谦逊好学</p>
+        <p>热爱技术，对新技术有学习兴趣，学习能强</p>
+        <p>有责任心，有团队意识</p>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+<script src="./index.js"></script>
+
+</html>

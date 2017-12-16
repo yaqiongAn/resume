@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <link rel="stylesheet" href="./css/bootstrap-theme.css">
+
+        <script src="./js/jquery-2.1.4.min.js" charset="utf-8"></script>
+        <script src="./js/bootstrap.js" charset="utf-8"></script>
+
+        <style media="screen">
+        body {
+            font-family: "Helvetica Neue", "Helvetica", "Lucida Grande", "Arial", "Hiragino Sans GB", "Microsoft Yahei", "WenQuanYi Micro Hei", "sans-serif";
+            font-weight: normal;
+            padding-top: 50px;
+}
+
+            #tit a, #tit icon-bar{
+                color: #efefef;
+            }
+            #tit .icon-bar{
+               background-color: #efefef;
+           }
+
+            .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+                background-color: transparent;
+                       }
+
+           .jumbotron {
+               background: #cf4646;
+               text-align: center;
+               color: #fff
+           }
+            .btn {
+                color: #efbfbf;
+                border: none;
+                box-shadow: inset 0 0 0 2px #efbfbf;
+                border-radius: 2px;
+                background-color: transparent;
+                margin-top: 26px;
+            }
+
+            .btn:hover, .btn:focus {
+                color: #fff;
+                box-shadow: inset 0 0 0 2px #fff;
+            }
+
+           img {
+               width: 200px;
+               height: 121px;
+
+           }
+
+          .footer, .footer a {
+              text-align: center;
+                color: #aaa;
+          }
+        </style>
+    </head>
+    <body>
+
+        <!--顶部固定导航-->
+        <!--设置id值的原因：加大选择器的权重，保证自定义样式能覆盖bs的默认样式-->
+        <!--设置navbar的原因：声明为导航条-->
+        <!--设置navbar-default的原因：设置导航条的样式为默认的样式，还有其他的导航样式，请查阅导航条一节的说明文当-->
+        <!--设置navbar-fixed-top的原因：让导航条固定在页面顶端，改为bottom就是固定在底部-->
+
+        <nav id="tit" class="navbar navbar-default navbar-fixed-top" style="background:#cf4646">
+            <!--使用container作为类名的原因：设置页面的宽度-->
+            <div class="container">
+                <!--导航左侧-->
+                <!--设置navbar-header的原因：导航如果没有折叠，这里的文本是显示在导航做左侧-->
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">Gulp 中文网</a>
+                    <!--设置navbar-toggle的原因：当导航条折叠时，这一部分负责渲染展开折叠导航的按钮-->
+                    <button aria-controls="navbar" class="navbar-toggle" type="button" name="button" data-toggle="collapse" aria-expanded="false" data-target="#navbar">
+
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <!--导航右侧-->
+                <!--设置navbar-right的原因：让导航条居页面右侧-->
+                <div id="navbar"  class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">中文文档</a></li>
+                        <li><a href="#">入门指南</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">插件开发</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">使用技巧</a></li>
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+
+        <!--头部-->
+        <header class="jumbotron">
+            <img class="logo" src="./logo.png" alt="">
+            <h4>用自动化构建工具增强你的工作流程！</h4>
+            <a class="btn btn-lg " href="http://www.baidu.com" role="button">开始使用</a>
+        </header>
+
+        <!--页面正文-->
+        <!--使用container作为类名的原因：保证栅格系统正常工作、设置页面的宽度-->
+        <main class="container">
+            <!--第一行-->
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>易于使用</h2>
+                    <p>通过代码优于配置的策略，Gulp 让简单的任务简单，复杂的任务可管理。</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>构建快速</h2>
+                    <p>利用 Node.js 流的威力，你可以快速构建项目并减少频繁的 IO 操作。</p>
+                </div>
+            </div>
+
+            <!--第二行-->
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>插件高质</h2>
+                    <p>Gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作。</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>易于学习</h2>
+                    <p>通过最少的 API，掌握 Gulp 毫不费力，构建工作尽在掌握：如同一系列流管道。</p>
+                </div>
+            </div>
+        </main>
+
+        <!--底部-->
+        <footer class="footer">
+            <!--使用container作为类名的原因：设置页面的宽度-->
+            <div class="container">
+                <p>© Gulp 中文网 2015</p>
+                <a href="#">京ICP备11008151号</a> | 京公网安备11010802014853
+
+            </div>
+        </footer>
+    </body>
+</html>

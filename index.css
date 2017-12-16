@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+}
+a,a:hover{
+    text-decoration: none;    
+}
+.resume{
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    border: none;
+}
+.navbar {
+    background: rgba(130, 207, 207, 0.4);
+    transition: 1s all ease;
+}
+.navbar.blue {
+    background: rgba(71, 166, 173,1);
+}
+.navbar.black {
+    background: rgba(51, 51, 51,.7);
+}
+
+.resume .navbar-brand,
+.resume .navbar-brand:visited,
+.resume .navbar-brand:hover
+{
+    color: #A7E615;
+    font-size: 18px;
+}
+.resume .navbar-right li a,
+.resume .navbar-right li a:visited{
+    color: #ffffff !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+.resume .navbar-right li a:hover {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:visited,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #ffffff;
+    background-color:#0F698A ;
+    text-decoration: none;
+}
+.navbar-default .navbar-toggle {
+    background-color: #122b40;
+}
+ .navbar-default .navbar-toggle:focus{
+     background-color: #122b40;
+}
+.navbar-default .navbar-toggle:hover {
+    background-color: #122b40;
+}
+#fullPage-nav{
+    top:80%;
+}
+.section{
+    background: url(http://www.17sucai.com/preview/713101/2017-03-09/two/images/img_bg_1.jpg) 50%;
+}
+.section { 
+    text-align: center; 
+    font: 50px 'Source Han Sans'; 
+    color: #fff;
+    font-weight: 200;
+    text-shadow: 0 1px 2px rgba(0,0, 0, .4);
+    
+}
+.section1 h3{
+    margin: -3em 0 1em 0;
+    text-shadow: 0 1px 2px rgba(0,0, 0, .4);
+    font-weight: 100;
+}
+.section1 a{
+    font-size: .2em;
+    color:white;
+    text-decoration: none;
+}
+.p{
+    font-size: .3em; 
+}
+.section2 p{
+    margin-bottom: .3em;
+}
+.skill{
+    /* width:70%; */
+    text-align: center;
+    margin:0 auto;
+}
+.skill>li{
+    
+    font-size: .3em;
+    text-shadow: 0 1px 2px rgba(0,0, 0, .4);
+    list-style: none;
+    line-height: 30px;
+}
+.section3 h3{
+    margin: -4em 0 3em 0;
+    font-size: .4em;
+}
+.section i{
+    width: 120px;
+    height: 120px;
+    padding: 34px 0;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    color: rgb(248, 250, 248);
+    /* background: #428e94; */
+    background: rgba(67, 109, 114, 0.5);
+    /* -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out; */
+    /* transition: all 0.5s ease-out; */
+}
+.section3 h3,.section3 h4{
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    font-weight: 300;
+}
+.info{
+    display: flex;
+    justify-content: space-around;
+}
+.info h4{
+    font-size: 0.35em;
+}
+.info p{
+    font-size: 0.2em;
+}
+.slide1{
+    display: flex;
+    justify-content: space-around;
+}
+.work{
+    position: relative;
+    display: inline-block;
+}
+
+.work img{
+    width:4em;
+    height:4em;
+    box-shadow:  0.2em 0.2em 0.4em rgba(15, 41, 31, 0.5);
+    
+}
+.controlArrowColor{
+    border:none;
+    background: url()
+}
+.jishu{
+    display: none;
+    width:10.0em;
+    height:10.0em;
+    padding:3.35em 0;
+    background-color: rgba(0, 0, 0, .4);
+    color:rgb(69, 175, 194);
+    text-shadow: 0 1px 2px rgba(0,0, 0, .4);
+    font-weight: 500;
+    font-size: .4em;
+    position: absolute;
+    top:0;
+    left:0;
+
+}
+/* .jishu p{
+} */
+.slide-box{
+    display: none;
+    padding:4em 0;
+    font-size: .4em;
+    background: url(http://www.jq22.com/demo/fullpage20160724/images/bg1.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+

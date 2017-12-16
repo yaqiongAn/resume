@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="rem.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="xiaomi.css">
+    <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="./xiaomi.js" charset="utf-8"></script>
+    <style media="screen">
+    @font-face {
+      font-family: 'icomoon';
+      src:  url('wenzi/fonts/icomoon.eot?ve8ytc');
+      src:  url('wenzi/fonts/icomoon.eot?ve8ytc#iefix') format('embedded-opentype'),
+        url('wenzi/fonts/icomoon.ttf?ve8ytc') format('truetype'),
+        url('wenzi/fonts/icomoon.woff?ve8ytc') format('woff'),
+        url('wenzi/fonts/icomoon.svg?ve8ytc#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    p{
+      font-family: 'icomoon';
+    }
+    .main{
+      padding-top: 1.98rem;
+      padding-bottom: 1.2rem;
+    }
+    header{
+      position: fixed;
+      top: 0;
+      z-index: 5;
+
+    }
+    .footer{
+      position: fixed;
+      bottom: 0;
+      background: white;
+      width:100%;
+
+    }
+    .footer ul{
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding:.3rem .1rem;
+    }
+    .footer p{
+      font-size: .3rem;
+      color:gray;
+      text-align: center;
+    }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="index-header">
+        <div class="img-mi">
+          <img src="http://m.mi.com/component/header/img/logo_121d4a6.png" alt="">
+        </div>
+        <div class="input">
+          <input type="text" name="" value="" placeholder="搜索商品名称">
+        </div>
+        <div class="submit">
+          <input type="submit" name="" value="登录">
+        </div>
+
+      </div>
+      <div class="nav-header">
+        <div class="nav">
+          <div class="div1">推荐</div>
+          <div class="div2">手机</div>
+          <div class="div3">智能</div>
+          <div class="div4">电视</div>
+          <div class="div5">盒子</div>
+          <div class="div6">电脑</div>
+          <div class="div7">生活周边</div>
+        </div>
+      </div>
+
+    </header>
+    <div class="main">
+      <div class="turn">
+        <div class="turn-wrap">
+          <div class="">
+            <a href="#"><img src="https://i8.mifile.cn/v1/a1/1dd6ca9e-24d2-7c0c-9998-c85a8f78ed6c.webp" alt=""></a>
+          </div>
+          <div class="">
+            <a href="#"><img src="https://i8.mifile.cn/v1/a1/aceeb2de-9149-40ae-2e9e-46dae134a335.webp" alt=""></a>
+          </div>
+          <div class="">
+            <a href="#"><img src="https://i8.mifile.cn/v1/a1/d63aaf1f-db3a-eae9-1ac0-1362a3ae1843.webp" alt=""></a>
+          </div>
+        </div>
+        <div class="point">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-div">
+          <div class="img">
+          </div>
+        </div>
+        <div class="card-div">
+          <div class="img">
+          </div>
+        </div>
+        <div class="card-div">
+          <div class="img">
+          </div>
+        </div>
+        <div class="card-div">
+          <div class="img">
+          </div>
+        </div>
+        <div class="card-div">
+          <div class="img">
+          </div>
+        </div>
+      </div>
+      <div class="news">
+        <div class="news-img">
+        </div>
+        <div class="newspaper">
+
+        </div>
+      </div>
+      <div class="divider_line" ></div>
+      <div class="section">
+        <div class="section-box1">
+        </div>
+        <div class="section-box2">
+        </div>
+        <div class="section-box3">
+        </div>
+      </div>
+      <div class="divider_line"></div>
+      <div class="mi5">
+      </div>
+      <div class="divider_line"></div>
+      <div class="book">
+        <div class="divider_line"></div>
+      </div>
+      <div class="redMi">
+      </div>
+      <div class="divider_line2"></div>
+      <div class="bigbox1">
+        <div class="box1">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+                <!-- <img src="./money.png" alt=""> -->
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+
+                <span>起</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <span>起</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <span>起</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cells">
+        <div class="divider_line"></div>
+        <div class="cells-img">
+
+        </div>
+        <div class="divider_line"></div>
+      </div>
+      <div class="mi-img">
+        <div class="divider_line2"></div>
+      </div>
+      <div class="bigbox2">
+        <div class="box1">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h">
+        <div class="">
+          <a href="#"><div class="">
+                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;更多新品>
+          </div></a>
+        </div>
+      </div>
+      <div class="wrap1">
+        <div class="divider_line"></div>
+        <div class="wrap1-img">
+
+        </div>
+        <div class="divider_line"></div>
+      </div>
+      <div class="wrap2">
+        <div class="wrap2-img">
+
+        </div>
+        <div class="divider_line2"></div>
+      </div>
+      <div class="bigbox3">
+        <div class="bigbox3-box1">
+          <div class="bigbox3-box1-img">
+            <div class="bigbox3-info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bigbox3-box2">
+          <div class="bigbox3-box2-img">
+            <div class="bigbox3-info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bigbox3-box3">
+          <div class="bigbox3-box3-img">
+            <div class="bigbox3-info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h">
+        <div class="">
+          <a href="#"><div class="">
+            更多米家智能产品>
+          </div></a>
+        </div>
+      </div>
+
+      <div class="wrap3">
+        <div class="divider_line"></div>
+        <div class="wrap3-img">
+
+        </div>
+        <div class="divider_line"></div>
+      </div>
+      <div class="bigbox4">
+        <div class="bigbox">
+          <div class="box1">
+
+          </div>
+          <div class="box2">
+
+          </div>
+
+        </div>
+        <div class="divider_line2"></div>
+        <div class="bigbox">
+          <div class="box1">
+
+          </div>
+          <div class="box2">
+
+          </div>
+        </div>
+        <div class="divider_line2"></div>
+        <div class="bigbox">
+          <div class="box1">
+
+          </div>
+          <div class="box2">
+
+          </div>
+        </div>
+        <div class="divider_line"></div>
+      </div>
+      <div class="wrap4">
+      </div>
+      <div class="wrap5">
+        <div class="divider_line"></div>
+        <div class="wrap5-img1">
+
+        </div>
+        <div class="wrap5-img2">
+
+        </div>
+      </div>
+      <div class="bigbox5">
+        <div class="box1">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider_line"></div>
+      <div class="wrap6">
+      </div>
+      <div class="bigbox6">
+        <div class="box1">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+
+              </div>
+              <div class="drief">
+
+              </div>
+              <div class="price">
+
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box3">
+          <div class="box1-1">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+          <div class="box1-2">
+            <div class="info">
+              <div class="name">
+              </div>
+              <div class="drief">
+              </div>
+              <div class="price">
+                <!-- <span>起</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="divider_line2"></div>
+      <div class="wrap7">
+      </div>
+      <div class="wrap8">
+        <div class="wrap8img">
+
+        </div>
+        <div class="price">
+          <img src="./money.png" alt="">
+        </div>
+      </div>
+      <div class="wrap9">
+        <div class="wrap9img1">
+          <div class="price">
+            <div class="drief">
+
+            </div>
+          </div>
+        </div>
+        <div class="wrap9img2">
+          <div class="price">
+            <span>起</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="divider_line"></div>
+
+      <!-- <div class="wrap10">
+      </div> -->
+    </div>
+    <div class="footer">
+      <ul>
+        <li>
+          <p></p>
+          <p>首页</p>
+        </li>
+        <li>
+          <p></p>
+          <p>分类</p>
+        </li>
+        <li>
+          <p></p>
+          <p>购物车</p>
+        </li>
+        <li>
+          <p></p>
+          <p>我的</p>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
