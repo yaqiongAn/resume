@@ -3,7 +3,8 @@
     padding:0;
 }
 a,a:hover{
-    text-decoration: none;    
+    text-decoration: none;  
+    color: white;  
 }
 .resume{
     position: fixed;
@@ -83,8 +84,12 @@ a,a:hover{
 }
 .p{
     font-size: .3em; 
+    background:-webkit-linear-gradient(left,#f00,#ff0 25%,#0f0 40%,#0ff 55%,#00f 70%,#f00);
+    -webkit-background-clip:text;/*只有webkit内核支持text的剪切模式*/
+    color:transparent;
 }
 .section2 p{
+    font-size: .8em;
     margin-bottom: .3em;
 }
 .skill{
@@ -94,14 +99,25 @@ a,a:hover{
 }
 .skill>li{
     
-    font-size: .3em;
-    text-shadow: 0 1px 2px rgba(0,0, 0, .4);
+    font-size: .26em;
+    text-shadow: 0 1px 2px rgba(0,0, 0, .3);
     list-style: none;
-    line-height: 30px;
+    line-height: 29px;
 }
 .section3 h3{
     margin: -4em 0 3em 0;
     font-size: .4em;
+}
+.section4{
+    position: relative;
+}
+.section4 h3{
+    font-size: .4em;
+    font-weight: 300;
+    position: absolute;
+    top: 10%;
+    left:0;
+    width:100%;
 }
 .section i{
     width: 120px;
@@ -172,7 +188,7 @@ a,a:hover{
     display: none;
     padding:4em 0;
     font-size: .4em;
-    background: url(http://www.jq22.com/demo/fullpage20160724/images/bg1.jpg) no-repeat;
-    background-size: 100% 100%;
+    background: url(http://www.jq22.com/demo/fullpage20160724/images/bg1.jpg) no-repeat center;
+    background-size:cover;
 }
 
