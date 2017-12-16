@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+
+        html,body,div{
+
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #box{
+
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        .setView{
+            width: 100%;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+
+        canvas{
+
+            /*不能再css里设置大小*/
+            /*width: 100%;*/
+            /*height: 300px;*/
+            background-color: darkgrey;
+            cursor: pointer;
+
+        }
+
+        .colorMenuView input{
+
+            width: 30px;
+            height: 30px;
+            margin-left: 15px;
+            margin-top: 15px;
+
+        }
+
+        .colorMenuView input:first-of-type{
+            background-color: pink;
+        }
+
+        .colorMenuView input:nth-of-type(2){
+            background-color: orange;
+        }
+
+        .colorMenuView input:nth-of-type(3){
+            background-color: deepskyblue;
+        }
+
+        .colorMenuView input:nth-of-type(4){
+            background-color: purple;
+        }
+
+        .clearView input{
+
+            margin-top: 15px;
+
+            margin-left: 15px;
+
+            background-color: white;
+        }
+
+    </style>
+    <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <div id="box">
+
+        <div class="setView">
+
+            <div class="colorMenuView">
+                请选择颜色:
+                <input type="button">
+                <input type="button">
+                <input type="button">
+                <input type="button">
+            </div>
+
+            <div class="clearView">
+
+                <input class="clearBtn" type="button" value="清除画布">
+
+            </div>
+
+        </div>
+        <canvas width="600" height="300">
+            您的浏览器不支持canvas
+        </canvas>
+    </div>
+  </body>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    var ctx=$('canvas')[0].getContext('2d');
+    $('.colorMenuView input').each(function(index, el) {
+      $('.colorMenuView input').eq(index).on('click', function(event) {
+        event.preventDefault();
+        console.log($('.colorMenuView input').eq(index).css('background-color'));
+        var color=$('.colorMenuView input').eq(index).css('background-color');
+        console.log(color);
+        ctx.strokeStyle=color;
+      });
+    });
+
+    $('canvas').on('mousedown', function(e) {
+      event.preventDefault();
+      var x = e.clientX - $('canvas').offset().left;
+
+      var y = e.clientY - $('canvas').offset().top;
+      console.log(x);
+      $('canvas')[0].oldPoint = {
+          x : x - 1,
+          y : y
+      };
+
+      $(this).mousemove(move);
+      $(this).mouseup(up);
+
+    });
+    function move(e){
+      var x = e.clientX - $('canvas').offset().left;
+
+      var y = e.clientY - $('canvas').offset().top;
+      ctx.beginPath();
+      ctx.lineWidth=5;
+      ctx.moveTo($('canvas')[0].oldPoint.x,$('canvas')[0].oldPoint.y);
+      ctx.lineTo(x,y);
+      ctx.stroke();
+      $('canvas')[0].oldPoint.x = x;
+
+      $('canvas')[0].oldPoint.y = y;
+   }
+   function up(){
+       $(this).unbind('mousemove');
+   }
+
+   $('.clearBtn').on('mousedown', function(e) {
+    
+     ctx.strokeStyle='#a9a9a9'
+
+   });
+
+  });
+
+  </script>
+</html>
